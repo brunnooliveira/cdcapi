@@ -6,6 +6,8 @@ import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
@@ -16,6 +18,12 @@ public class CrudBooksControllers {
   private AuthorRepository authorRepository;
   @Autowired
   private BookRepository bookRepository;
+
+  @InitBinder
+  public void initBinder(WebDataBinder webDataBinder) {
+    webDataBinder.addValidators(new UniqueBookIsbnValidator(bookRepository),
+        new UniqueBookTitleValidator(bookRepository));
+  }
 
   @PostMapping(value = "/api/books")
   @Transactional

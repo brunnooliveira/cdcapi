@@ -31,6 +31,10 @@ public class Book {
   @ManyToOne
   private @NotNull Author author;
 
+  @Deprecated
+  public Book() {
+  }
+
   public Book(@NotBlank @Size(max = 100) String title, @NotBlank @Size(max = 50) String subTitle,
       @Min(20) BigDecimal price, @NotBlank String content, @NotBlank String sumary, @Min(100) int numPages,
       @NotBlank String isbn, @NotBlank @URL String linkBookCover, @NotNull Author author) {

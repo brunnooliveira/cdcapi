@@ -1,7 +1,6 @@
 package br.com.bgdo.cdcapi.bookdetail;
 
 import java.math.BigDecimal;
-import java.util.function.Function;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
