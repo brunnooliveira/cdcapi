@@ -22,7 +22,7 @@ public class CrudCategoriesController {
     dataBinder.addValidators(new UniqueCategoryNameValidator(categoryRepository));
   }
 
-  @PostMapping(value = "/api/categoria")
+  @PostMapping(value = "/api/categories")
   @Transactional
   public void newCategory(@RequestBody @Valid NewCategoryForm form) {
     Category newCategory = new Category(form.getName());

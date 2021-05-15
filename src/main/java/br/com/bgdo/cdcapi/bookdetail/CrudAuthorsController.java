@@ -14,7 +14,7 @@ public class CrudAuthorsController {
   @Autowired
   private AuthorRepository authorRepository;
 
-  @PostMapping("/api/author")
+  @PostMapping("/api/authors")
   @Transactional
   public void newAuthor(@Valid @RequestBody NewAuthorForm form) {
     Author newAuthor = form.newAuthor();
