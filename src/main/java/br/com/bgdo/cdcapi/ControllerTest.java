@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 public class ControllerTest {
 
-  @GetMapping(value = "/")
+  @GetMapping(value = "api/test")
   public String teste() {
     return "up and running... ";
   }
