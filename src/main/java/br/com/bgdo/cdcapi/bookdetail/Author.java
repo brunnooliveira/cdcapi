@@ -23,6 +23,7 @@ public class Author {
   private LocalDateTime createdAt = LocalDateTime.now();
 
   public Author(@NotBlank String name, @NotBlank @URL String githubLink) {
+    super();
     this.name = name;
     this.githubLink = githubLink;
   }

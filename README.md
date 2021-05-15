@@ -10,6 +10,6 @@ docker-compose up -d
 docker exec -it mysql mysql -u root -p
 ```
 
-### API Docs: Swagger
+#### API Docs: Swagger
 
 http://localhost:8080/swagger-ui.html
