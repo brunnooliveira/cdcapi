@@ -2,10 +2,7 @@ package br.com.bgdo.cdcapi.bookdetail;
 
 import java.util.Optional;
 
-import org.springframework.validation.Errors;
-import org.springframework.validation.Validator;
-
-public class UniqueBookIsbnValidator implements Validator {
+public class UniqueBookIsbnValidator extends UniqueBookFieldValidator {
 
   private BookRepository bookRepository;
 
@@ -14,17 +11,12 @@ public class UniqueBookIsbnValidator implements Validator {
   }
 
   @Override
-  public boolean supports(Class<?> clazz) {
-    return NewBookForm.class.isAssignableFrom(clazz);
+  protected Optional<Book> findBookByField(NewBookForm form) {
+    return bookRepository.findByIsbn(form.getIsbn());
   }
 
   @Override
-  public void validate(Object target, Errors errors) {
-    NewBookForm form = (NewBookForm) target;
-    String isbn = form.getIsbn();
-    Optional<Book> possibleBook = bookRepository.findByIsbn(isbn);
-    if (possibleBook.isPresent()) {
-      errors.rejectValue("isbn", "ISBN already exists");
-    }
+  protected String getInvalidField() {
+    return "isbn";
   }
 }

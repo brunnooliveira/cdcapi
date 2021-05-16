@@ -2,10 +2,7 @@ package br.com.bgdo.cdcapi.bookdetail;
 
 import java.util.Optional;
 
-import org.springframework.validation.Errors;
-import org.springframework.validation.Validator;
-
-public class UniqueBookTitleValidator implements Validator {
+public class UniqueBookTitleValidator extends UniqueBookFieldValidator {
 
   private BookRepository bookRepository;
 
@@ -14,18 +11,12 @@ public class UniqueBookTitleValidator implements Validator {
   }
 
   @Override
-  public boolean supports(Class<?> clazz) {
-    return NewBookForm.class.isAssignableFrom(clazz);
+  public Optional<Book> findBookByField(NewBookForm form) {
+    return bookRepository.findByTitle(form.getTitle());
   }
 
   @Override
-  public void validate(Object target, Errors errors) {
-    NewBookForm form = (NewBookForm) target;
-    String title = form.getTitle();
-    Optional<Book> possibleBook = bookRepository.findByTitle(title);
-    if (possibleBook.isPresent()) {
-      errors.rejectValue("title", "Title already exists");
-    }
+  protected String getInvalidField() {
+    return "title";
   }
-
 }
