@@ -56,4 +56,16 @@ public class Book {
         + ", linkBookCover='" + linkBookCover + "'" + ", author='" + author + "'" + "}";
   }
 
+  public String getTitle() {
+    return title;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public Author getAuthor() {
+    return author;
+  }
+
 }

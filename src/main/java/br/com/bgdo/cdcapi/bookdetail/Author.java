@@ -38,4 +38,8 @@ public class Author {
     return "{" + " name='" + name + "'" + ", githubLink='" + githubLink + "'" + ", createdAt='" + createdAt + "'" + "}";
   }
 
+  public String getName() {
+    return name;
+  }
+
 }
