@@ -59,6 +59,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.commonmark</groupId>
+			<artifactId>commonmark</artifactId>
+			<version>0.17.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.commonmark/commonmark-ext-autolink -->
+		<dependency>
+			<groupId>org.commonmark</groupId>
+			<artifactId>commonmark-ext-autolink</artifactId>
+			<version>0.17.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
