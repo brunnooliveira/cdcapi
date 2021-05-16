@@ -9,7 +9,6 @@ public class Cart {
 
   List<BookCartDTO> books = new ArrayList<>();
 
-  @Deprecated
   public Cart() {
     super();
   }
