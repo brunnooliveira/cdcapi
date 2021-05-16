@@ -68,4 +68,32 @@ public class Book {
     return author;
   }
 
+  public String getSubTitle() {
+    return subTitle;
+  }
+
+  public String getLinkBookCover() {
+    return linkBookCover;
+  }
+
+  public BigDecimal getPrice() {
+    return price;
+  }
+
+  public String getContent() {
+    return content;
+  }
+
+  public String getSumary() {
+    return sumary;
+  }
+
+  public int getNumPages() {
+    return numPages;
+  }
+
+  public String getIsbn() {
+    return isbn;
+  }
+
 }
