@@ -1,4 +1,4 @@
-package br.com.bgdo.cdcapi.bookdetail;
+package br.com.bgdo.cdcapi.bookdetail.author;
 
 import java.time.LocalDateTime;
 

@@ -1,6 +1,6 @@
 package br.com.bgdo.cdcapi.site.detalhe;
 
-import br.com.bgdo.cdcapi.bookdetail.Author;
+import br.com.bgdo.cdcapi.bookdetail.author.Author;
 
 public class BookAuthorDetailDTO {
 

@@ -2,8 +2,8 @@ package br.com.bgdo.cdcapi.site.detalhe;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.bgdo.cdcapi.bookdetail.Book;
-import br.com.bgdo.cdcapi.bookdetail.BookRepository;
+import br.com.bgdo.cdcapi.bookdetail.book.Book;
+import br.com.bgdo.cdcapi.bookdetail.book.BookRepository;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package br.com.bgdo.cdcapi.bookdetail;
+package br.com.bgdo.cdcapi.bookdetail.book;
 
 import java.math.BigDecimal;
 
@@ -8,6 +8,10 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.web.multipart.MultipartFile;
+
+import br.com.bgdo.cdcapi.bookdetail.Uploader;
+import br.com.bgdo.cdcapi.bookdetail.author.Author;
+import br.com.bgdo.cdcapi.bookdetail.author.AuthorRepository;
 
 public class NewBookForm {
 

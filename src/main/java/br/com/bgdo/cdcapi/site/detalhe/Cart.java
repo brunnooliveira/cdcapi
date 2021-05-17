@@ -3,7 +3,7 @@ package br.com.bgdo.cdcapi.site.detalhe;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.bgdo.cdcapi.bookdetail.Book;
+import br.com.bgdo.cdcapi.bookdetail.book.Book;
 
 public class Cart {
 

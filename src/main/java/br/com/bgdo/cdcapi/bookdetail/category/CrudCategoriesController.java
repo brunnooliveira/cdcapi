@@ -1,4 +1,4 @@
-package br.com.bgdo.cdcapi.bookdetail;
+package br.com.bgdo.cdcapi.bookdetail.category;
 
 import org.springframework.web.bind.annotation.RestController;
 

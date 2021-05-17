@@ -1,6 +1,6 @@
 package br.com.bgdo.cdcapi.site;
 
-import br.com.bgdo.cdcapi.bookdetail.Book;
+import br.com.bgdo.cdcapi.bookdetail.book.Book;
 
 public class BookForHomeDTO {
 

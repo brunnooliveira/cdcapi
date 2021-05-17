@@ -2,7 +2,7 @@ package br.com.bgdo.cdcapi.site.detalhe;
 
 import java.math.BigDecimal;
 
-import br.com.bgdo.cdcapi.bookdetail.Book;
+import br.com.bgdo.cdcapi.bookdetail.book.Book;
 import br.com.bgdo.cdcapi.shared.Markdown;
 
 public class BookDetailDTO {

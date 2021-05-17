@@ -1,4 +1,4 @@
-package br.com.bgdo.cdcapi.bookdetail;
+package br.com.bgdo.cdcapi.bookdetail.book;
 
 import java.math.BigDecimal;
 
@@ -13,6 +13,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.URL;
+
+import br.com.bgdo.cdcapi.bookdetail.author.Author;
 
 @Entity
 public class Book {
